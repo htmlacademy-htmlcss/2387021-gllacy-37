@@ -19,12 +19,12 @@
           <ul class="nav-menu__list">
             <li class="nav-menu__item nav-menu__item-catalog">
               <a class="nav-menu__link nav-menu__link-catalog" href="#">Каталог</a>
-              <!-- <ul class="nav-menu__submenu">
+              <ul class="nav-menu__submenu">
                 <li class="nav-menu__submenu-item">
                   <a class="nav-menu__submenu-link nav-menu__submenu-link--favorite" href="#">Новинки</a>
                 </li>
                 <li class="nav-menu__submenu-item">
-                  <a class="nav-menu__submenu-link" href="./catalog.html">Сливочное</a>
+                  <a class="nav-menu__submenu-link" href="#">Сливочное</a>
                 </li>
                 <li class="nav-menu__submenu-item">
                   <a class="nav-menu__submenu-link" href="#">Щербеты</a>
@@ -35,13 +35,13 @@
                 <li class="nav-menu__submenu-item">
                   <a class="nav-menu__submenu-link" href="#">Мелорин</a>
                 </li>
-              </ul> -->
+              </ul>
             </li>
             <li class="nav-menu__item">
-              <a class="nav-menu__link" href="">Доставка и оплата</a>
+              <a class="nav-menu__link" href="#">Доставка и оплата</a>
             </li>
             <li class="nav-menu__item">
-              <a class="nav-menu__link" href="">О компании</a>
+              <a class="nav-menu__link" href="#">О компании</a>
             </li>
           </ul>
         </nav>
@@ -69,7 +69,7 @@
 
       <main class="catalog">
         <header class="catalog__inner-header">
-          <ul class="breadcrumbs-list">
+          <ol class="breadcrumbs-list">
             <li class="breadcrumbs-item">
               <a class="breadcrumbs-link" href="./index.html">Главная</a>
             </li>
@@ -79,12 +79,12 @@
             <li class="breadcrumbs-item">
               <a class="breadcrumbs-link breadcrumbs-link--active">Сливочное мороженое</a>
             </li>
-          </ul>
+          </ol>
           <h1 class="title catalog__title">Сливочное мороженое</h1>
         </header>
         <section class="catalog__filter">
           <h2 class="visually-hidden">Фильтр поиска.</h2>
-          <form class="filter-form" action="https://echo.htmlacademy.ru/" method="post">
+          <form class="filter-form" action="https://echo.htmlacademy.ru/" method="get">
             <fieldset class="filter-fieldset">
               <legend class="filter-legend">Сортировка:</legend>
               <select class="filter-select" name="sort">
@@ -251,7 +251,7 @@
             </li>
           </ul>
           <a class="button catalog-button" href="#">Показать еще</a>
-          <ul class="catalog__pagination-list">
+          <ol class="catalog__pagination-list">
             <li class="catalog__pagination-item">
               <button class="catalog__pagination-button catalog__pagination-button--active" type="button" aria-label="Предыдущая страница."></button>
             </li>
@@ -273,7 +273,7 @@
             <li class="catalog__pagination-item">
               <button class="catalog__pagination-button" type="button" aria-label="Следующая страница."></button>
             </li>
-          </ul>
+          </ol>
         </div>
       </main>
 
@@ -325,10 +325,11 @@
           <a class="copyright__link" href="https://htmlacademy.ru/" rel="noopener">
             <img class="copyright__img" src="./images/logo/logo-htmlacademy.svg" width="93" height="27" alt="Изображение логотипа HTML Academy.">
           </a>
-          <p class="copyright__desc">Сделано в <span class copyright__desc-underline>.html academy</span> © 2021</p>
+          <p class="copyright__desc">Сделано в <a class="copyright__desc-underline" href="https://htmlacademy.ru/" rel="noopener">.html academy</a> © 2021</p>
         </div>
       </footer>
     </div>
+    <script src="./scripts/script-submenu.js"></script>
   </body>
 
 </html>
