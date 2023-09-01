@@ -156,6 +156,7 @@ img {
 .nav-menu__submenu {
   display: none;
   position: absolute;
+  bottom: -213px;
   flex-direction: column;
   width: 135px;
   min-height: 188px;
@@ -166,6 +167,7 @@ img {
   padding: 8px 0;
   transition: all 0.3s ease-in-out;
   opacity: 0.6;
+  z-index: 2;
 }
 
 .has-submenu .nav-menu__submenu {
@@ -286,6 +288,7 @@ img {
 .slider {
   position: relative;
   min-height: 554px;
+  margin-bottom: 80px;
 }
 
 .slider__list {
@@ -339,10 +342,7 @@ img {
 
 .slider__title {
   font-size: 36px;
-  font-style: normal;
   font-weight: 900;
-  line-height: 46px;
-  color: var(--black);
   width: 470px;
   margin: 0 0 24px 0;
 }
@@ -489,4 +489,205 @@ img {
   width: 24px;
   height: 24px;
   outline: 2px solid rgba(252, 252, 252, 0.3);
+}
+
+.title {
+  color: var(--black);
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 46px;
+}
+
+.gifts {
+  margin-bottom: 80px;
+}
+
+.gifts__title {
+  text-align: center;
+  width: 440px;
+  margin: 0 auto 55px auto;
+}
+
+.gifts__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.gifts__item {
+  width: 570px;
+  height: 268px;
+  background-color: #ff7799;
+  border-radius: 16px;
+  list-style: none;
+  padding: 36px 0 36px 36px;
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.gifts__item--raspberry {
+  background-image: url("../images/raspberry.png");
+}
+
+.gifts__item--marshmallow {
+  background-image: url("../images/marshmallow.png");
+}
+
+.gifts__item-title {
+  color: var(--black);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  width: 305px;
+  margin: 0 0 28px 0;
+}
+
+.gifts__item-desc {
+  color: var(--black);
+  width: 305px;
+  margin: 0 0 28px 0;
+}
+
+.popular {
+  margin: 0 0 80px 0;
+}
+
+.popular__title {
+  text-align: center;
+  width: 528px;
+  margin: 0 auto 56px auto;
+}
+
+.popular__list {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.popular__item {
+  position: relative;
+  display: grid;
+  column-gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  text-align: center;
+  width: 270px;
+  min-height: 281px;
+  background-color: var(--grey);
+  border-radius: 8px;
+  padding: 133px 40px 28px 40px;
+  margin-top: 51px;
+  list-style: none;
+}
+
+.popular__img {
+  position: absolute;
+  border-radius: 50%;
+  top: -51px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.popular__item-title {
+  grid-column: 1/-1;
+  margin: 0 0 8px 0;
+}
+
+.popular__item-desc {
+  grid-column: 1/-1;
+  margin: 0 0 16px 0;
+}
+
+.popular__item-cost {
+  align-self: center;
+  justify-self: start;
+}
+
+.popular__item-button {
+  position: relative;
+  justify-self: end;
+  align-self: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #ff2f64;
+  border: none;
+  cursor: pointer;
+}
+
+.popular__item-button::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+  mask: url("../images/icons/icon-cart.svg");
+  -webkit-mask: url("../images/icons/icon-cart.svg");
+  background-color: var(--grey);
+}
+
+.advantages {
+  min-height: 480px;
+  border-radius: 16px;
+  background-image: url("../images/wafer-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 24px;
+}
+
+.advantages__wrapper {
+  width: 1122px;
+  min-height: 432px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 56px 40px;
+}
+
+.advantages__title {
+  text-align: center;
+  margin: 0 auto 56px auto;
+  width: 995px;
+}
+
+.advantages__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px 32px;
+  margin: 0;
+  padding: 0;
+}
+
+.advantages__item {
+  list-style: none;
+  width: 505px;
+  padding-left: 64px;
+  background-repeat: no-repeat;
+  background-position: top 0 left 0;
+}
+
+.advantages__item--production {
+  background-image: url("../images/icons/icon-ice-cream.svg");
+}
+
+.advantages__item--purchase {
+  background-image: url("../images/icons/icon-cow.svg");
+}
+
+.advantages__item--natural {
+  background-image: url("../images/icons/icon-leaf.svg");
+}
+
+.advantages__item--thermopack {
+  background-image: url("../images/icons/icon-thermometer.svg");
+}
+
+.advantages__item-desc {
+  width: 442px;
+  margin: 0;
 }
