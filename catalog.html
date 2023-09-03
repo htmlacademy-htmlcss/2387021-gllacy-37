@@ -53,6 +53,9 @@
             <a class="header-menu__link header-menu__link-search" href="#">
               <p class="visually-hidden">Поиск по сайту.</p>
             </a>
+            <div class="header-menu__search-window">
+              <input class="input header-menu__input" type="text" placeholder="Поиск по сайту">
+            </div>
           </li>
           <li class="header-menu__item">
             <a class="header-menu__link header-menu__link-cabinet" href="#">
@@ -95,12 +98,15 @@
             </fieldset>
             <fieldset class="filter-fieldset">
               <legend class="filter-legend">
-                Цена:<span class="filter-legend__cost-min">100 ₽</span> - <span class="filter-legend__cost-max">500 ₽</span>
+                Цена:<span class="filter-legend__cost-min"> 100 ₽</span> - <span class="filter-legend__cost-max">500
+                  ₽</span>
               </legend>
-              <div class="range-line">
-                <div class="range-bar">
-                  <button class="range-button min-button" type="button" aria-label="Минимальная цена."></button>
-                  <button class="range-button max-button" type="button" aria-label="Максимальная цена."></button>
+              <div class="filter-fieldset-wrapper">
+                <div class="range-line">
+                  <div class="range-bar" style="left: 40px;">
+                    <button class="range-button min-button" type="button" aria-label="Минимальная цена."></button>
+                    <button class="range-button max-button" type="button" aria-label="Максимальная цена."></button>
+                  </div>
                 </div>
               </div>
             </fieldset>
@@ -108,54 +114,70 @@
               <legend class="filter-legend">Жирность:</legend>
               <ul class="filter-list">
                 <li class="filter-item">
-                  <input class="visually-hidden filter-input" type="radio" name="fat-content" id="0%" value="0%">
-                  <span class="filter-input-mark"></span>
-                  <label class="filter-label" for="0%">0%</label>
+                  <label class="filter-label" for="0%">
+                    <input class="visually-hidden filter-input" type="radio" name="fat-content" id="0%" value="0%">
+                    <span class="filter-mark"></span>
+                    0%</label>
                 </li>
                 <li class="filter-item">
-                  <input class="visually-hidden filter-input" type="radio" name="fat-content" id="until-10%" value="until-10%" checked>
-                  <span class="filter-input-mark"></span>
-                  <label class="filter-label" for="until-10%">до 10%</label>
+                  <label class="filter-label" for="until-10%">
+                    <input class="visually-hidden filter-input" type="radio" name="fat-content" id="until-10%"
+                      value="until-10%" checked>
+                    <span class="filter-mark"></span>
+                    до 10%</label>
                 </li>
                 <li class="filter-item">
-                  <input class="visually-hidden filter-input" type="radio" name="fat-content" id="until-30%" value="until-30%">
-                  <span class="filter-input-mark"></span>
-                  <label class="filter-label" for="until-30%">до 30%</label>
+                  <label class="filter-label" for="until-30%">
+                    <input class="visually-hidden filter-input" type="radio" name="fat-content" id="until-30%"
+                      value="until-30%">
+                    <span class="filter-mark"></span>
+                    до 30%</label>
                 </li>
                 <li class="filter-item">
-                  <input class="visually-hidden filter-input" type="radio" name="fat-content" id="over-30%" value="over-30%">
-                  <span class="filter-input-mark"></span>
-                  <label class="filter-label" for="over-30%">выше 30%</label>
+                  <label class="filter-label" for="over-30%">
+                    <input class="visually-hidden filter-input" type="radio" name="fat-content" id="over-30%"
+                      value="over-30%">
+                    <span class="filter-mark"></span>
+                    выше 30%</label>
                 </li>
               </ul>
             </fieldset>
             <fieldset class="filter-fieldset">
               <legend class="filter-legend">Наполнители:</legend>
-              <ul class="filter-list">
-                <li class="filter-item">
-                  <input class="visually-hidden filter-input" type="checkbox" name="fillers" id="chocolate" value="chocolate" checked>
-                  <span class="filter-input-mark"></span>
-                  <label class="filter-label" for="chocolate">шоколадные</label>
+              <ul class="filter-list filter-list-checkbox">
+                <li class="filter-item filter-item-checkbox">
+                  <label class="filter-label" for="chocolate">
+                    <input class="visually-hidden filter-input" type="checkbox" name="fillers" id="chocolate"
+                      value="chocolate" checked>
+                    <span class="filter-mark-checkbox"></span>
+                    шоколадные</label>
                 </li>
-                <li class="filter-item">
-                  <input class="visually-hidden filter-input" type="checkbox" name="fillers" id="sugar-sprinkles" value="sugar-sprinkles" checked>
-                  <span class="filter-input-mark"></span>
-                  <label class="filter-label" for="sugar-sprinkles">сахарные посыпки</label>
+                <li class="filter-item filter-item-checkbox">
+                  <label class="filter-label" for="sugar-sprinkles">
+                    <input class="visually-hidden filter-input" type="checkbox" name="fillers" id="sugar-sprinkles"
+                      value="sugar-sprinkles" checked>
+                    <span class="filter-mark-checkbox"></span>
+                    сахарные посыпки</label>
                 </li>
-                <li class="filter-item">
-                  <input class="visually-hidden filter-input" type="checkbox" name="fillers" id="fruits" value="fruits">
-                  <span class="filter-input-mark"></span>
-                  <label class="filter-label" for="fruits">фрукты</label>
+                <li class="filter-item filter-item-checkbox">
+                  <label class="filter-label" for="fruits">
+                    <input class="visually-hidden filter-input" type="checkbox" name="fillers" id="fruits"
+                      value="fruits">
+                    <span class="filter-mark-checkbox"></span>
+                    фрукты</label>
                 </li>
-                <li class="filter-item">
-                  <input class="visually-hidden filter-input" type="checkbox" name="fillers" id="syrups" value="syrups">
-                  <span class="filter-input-mark"></span>
-                  <label class="filter-label" for="syrups">сиропы</label>
+                <li class="filter-item filter-item-checkbox">
+                  <label class="filter-label" for="syrups">
+                    <input class="visually-hidden filter-input" type="checkbox" name="fillers" id="syrups"
+                      value="syrups">
+                    <span class="filter-mark-checkbox"></span>
+                    сиропы</label>
                 </li>
-                <li class="filter-item">
-                  <input class="visually-hidden filter-input" type="checkbox" name="fillers" id="jams" value="jams">
-                  <span class="filter-input-mark"></span>
-                  <label class="filter-label" for="jams">джемы</label>
+                <li class="filter-item filter-item-checkbox">
+                  <label class="filter-label" for="jams">
+                    <input class="visually-hidden filter-input" type="checkbox" name="fillers" id="jams" value="jams">
+                    <span class="filter-mark-checkbox"></span>
+                    джемы</label>
                 </li>
               </ul>
             </fieldset>
@@ -166,114 +188,129 @@
         <div class="catalog__cards">
           <ul class="cards-list">
             <li class="cards-item popular__item">
-              <img class="cards-img popular__img" src="./images/catalog/ice-cream-1.jpg" width="168" height="168" alt="Шарик из клубничного мороженого.">
+              <img class="cards-img popular__img" src="./images/catalog/ice-cream-1.jpg" width="168" height="168"
+                alt="Шарик из клубничного мороженого.">
               <h3 class="cards-title popular__item-title">Малинка</h3>
               <p class="cards-desc popular__item-desc">Сливочное мороженое с малиновым джемом</p>
               <span class="cards-cost popular__item-cost">310 ₽/кг</span>
               <button class="cards-button popular__item-button" type="button" aria-label="Добавить в корзину."></button>
             </li>
             <li class="cards-item popular__item">
-              <img class="cards-img popular__img" src="./images/catalog/ice-cream-2.jpg" width="168" height="168" alt="Шарик из фисташкового мороженого.">
+              <img class="cards-img popular__img" src="./images/catalog/ice-cream-2.jpg" width="168" height="168"
+                alt="Шарик из фисташкового мороженого.">
               <h3 class="cards-title popular__item-title">Фисташка</h3>
               <p class="cards-desc popular__item-desc">Фисташковый пломбир с кусочками шоколада</p>
               <span class="cards-cost popular__item-cost">340 ₽/кг</span>
               <button class="cards-button popular__item-button" type="button" aria-label="Добавить в корзину."></button>
             </li>
             <li class="cards-item popular__item">
-              <img class="cards-img popular__img" src="./images/catalog/ice-cream-3.jpg" width="168" height="168" alt="Шарик из черничного мороженого.">
+              <img class="cards-img popular__img" src="./images/catalog/ice-cream-3.jpg" width="168" height="168"
+                alt="Шарик из черничного мороженого.">
               <h3 class="cards-title popular__item-title">Черника</h3>
               <p class="cards-desc popular__item-desc">Крем-брюле с черничным джемом</p>
               <span class="cards-cost popular__item-cost">330 ₽/кг</span>
               <button class="cards-button popular__item-button" type="button" aria-label="Добавить в корзину."></button>
             </li>
             <li class="cards-item popular__item">
-              <img class="cards-img popular__img" src="./images/catalog/ice-cream-4.jpg" width="168" height="168" alt="Шарик мороженого вкуса 'Бабл-гам'.">
+              <img class="cards-img popular__img" src="./images/catalog/ice-cream-4.jpg" width="168" height="168"
+                alt="Шарик мороженого вкуса 'Бабл-гам'.">
               <h3 class="cards-title popular__item-title">Бабл-гам</h3>
               <p class="cards-desc popular__item-desc">Ванильный пломбир со сладкой посыпкой</p>
               <span class="cards-cost popular__item-cost">320 ₽/кг</span>
               <button class="cards-button popular__item-button" type="button" aria-label="Добавить в корзину."></button>
             </li>
             <li class="cards-item popular__item">
-              <img class="cards-img popular__img" src="./images/catalog/ice-cream-5.jpg" width="168" height="168" alt="Шарик из ежевичного мороженого.">
+              <img class="cards-img popular__img" src="./images/catalog/ice-cream-5.jpg" width="168" height="168"
+                alt="Шарик из ежевичного мороженого.">
               <h3 class="cards-title popular__item-title">Ежевика</h3>
               <p class="cards-desc popular__item-desc">Сливочное мороженое с ежевичным джемом</p>
               <span class="cards-cost popular__item-cost">330 ₽/кг</span>
               <button class="cards-button popular__item-button" type="button" aria-label="Добавить в корзину."></button>
             </li>
             <li class="cards-item popular__item">
-              <img class="cards-img popular__img" src="./images/catalog/ice-cream-6.jpg" width="168" height="168" alt="Шарик из бананового мороженого.">
+              <img class="cards-img popular__img" src="./images/catalog/ice-cream-6.jpg" width="168" height="168"
+                alt="Шарик из бананового мороженого.">
               <h3 class="cards-title popular__item-title">Банан</h3>
               <p class="cards-desc popular__item-desc">Сливочный пломбир с банановым вкусом</p>
               <span class="cards-cost popular__item-cost">340 ₽/кг</span>
               <button class="cards-button popular__item-button" type="button" aria-label="Добавить в корзину."></button>
             </li>
             <li class="cards-item popular__item">
-              <img class="cards-img popular__img" src="./images/catalog/ice-cream-7.jpg" width="168" height="168" alt="Шарик из шоколадного мороженого.">
+              <img class="cards-img popular__img" src="./images/catalog/ice-cream-7.jpg" width="168" height="168"
+                alt="Шарик из шоколадного мороженого.">
               <h3 class="cards-title popular__item-title">Шоколадка</h3>
               <p class="cards-desc popular__item-desc">Классический шоколадный пломбир</p>
               <span class="cards-cost popular__item-cost">270 ₽/кг</span>
               <button class="cards-button popular__item-button" type="button" aria-label="Добавить в корзину."></button>
             </li>
             <li class="cards-item popular__item">
-              <img class="cards-img popular__img" src="./images/catalog/ice-cream-8.jpg" width="168" height="168" alt="Шарик из клубничного мороженого.">
+              <img class="cards-img popular__img" src="./images/catalog/ice-cream-8.jpg" width="168" height="168"
+                alt="Шарик из клубничного мороженого.">
               <h3 class="cards-title popular__item-title">Клубничка</h3>
               <p class="cards-desc popular__item-desc">Сливочный пломбир с клубничным вкусом</p>
               <span class="cards-cost popular__item-cost">300 ₽/кг</span>
               <button class="cards-button popular__item-button" type="button" aria-label="Добавить в корзину."></button>
             </li>
             <li class="cards-item popular__item">
-              <img class="cards-img popular__img" src="./images/catalog/ice-cream-9.jpg" width="168" height="168" alt="Шарик из лимонного мороженого.">
+              <img class="cards-img popular__img" src="./images/catalog/ice-cream-9.jpg" width="168" height="168"
+                alt="Шарик из лимонного мороженого.">
               <h3 class="cards-title popular__item-title">Лимон</h3>
               <p class="cards-desc popular__item-desc">Освежающий лимонный сорбет</p>
               <span class="cards-cost popular__item-cost">310 ₽/кг</span>
               <button class="cards-button popular__item-button" type="button" aria-label="Добавить в корзину."></button>
             </li>
             <li class="cards-item popular__item">
-              <img class="cards-img popular__img" src="./images/catalog/ice-cream-10.jpg" width="168" height="168" alt="Шарик из сливочного мороженого с ментолом.">
+              <img class="cards-img popular__img" src="./images/catalog/ice-cream-10.jpg" width="168" height="168"
+                alt="Шарик из сливочного мороженого с ментолом.">
               <h3 class="cards-title popular__item-title">Ментол</h3>
               <p class="cards-desc popular__item-desc">Сливочный пломбир с ментоловым сиропом</p>
               <span class="cards-cost popular__item-cost">320 ₽/кг</span>
               <button class="cards-button popular__item-button" type="button" aria-label="Добавить в корзину."></button>
             </li>
             <li class="cards-item popular__item">
-              <img class="cards-img popular__img" src="./images/catalog/ice-cream-11.jpg" width="168" height="168" alt="Шарик из сливочного мороженого с орехами.">
+              <img class="cards-img popular__img" src="./images/catalog/ice-cream-11.jpg" width="168" height="168"
+                alt="Шарик из сливочного мороженого с орехами.">
               <h3 class="cards-title popular__item-title">Орешек</h3>
               <p class="cards-desc popular__item-desc">Фисташковый пломбир с шоколадным сиропом</p>
               <span class="cards-cost popular__item-cost">360 ₽/кг</span>
               <button class="cards-button popular__item-button" type="button" aria-label="Добавить в корзину."></button>
             </li>
             <li class="cards-item popular__item">
-              <img class="cards-img popular__img" src="./images/catalog/ice-cream-12.jpg" width="168" height="168" alt="Шарик из мороженого со вкусом 'Крем-брюле'.">
+              <img class="cards-img popular__img" src="./images/catalog/ice-cream-12.jpg" width="168" height="168"
+                alt="Шарик из мороженого со вкусом 'Крем-брюле'.">
               <h3 class="cards-title popular__item-title">Крем-брюле</h3>
               <p class="cards-desc popular__item-desc">Классическое крем-брюле</p>
               <span class="cards-cost popular__item-cost">280 ₽/кг</span>
               <button class="cards-button popular__item-button" type="button" aria-label="Добавить в корзину."></button>
             </li>
           </ul>
-          <a class="button catalog-button" href="#">Показать еще</a>
-          <ol class="catalog__pagination-list">
-            <li class="catalog__pagination-item">
-              <button class="catalog__pagination-button catalog__pagination-button--active" type="button" aria-label="Предыдущая страница."></button>
-            </li>
-            <li class="catalog__pagination-item">
-              <a class="catalog__pagination-link catalog__pagination-link--active" href="#">1</a>
-            </li>
-            <li class="catalog__pagination-item">
-              <a class="catalog__pagination-link" href="#">2</a>
-            </li>
-            <li class="catalog__pagination-item">
-              <a class="catalog__pagination-link" href="#">3</a>
-            </li>
-            <li class="catalog__pagination-item">
-              <a class="catalog__pagination-link" href="#">4</a>
-            </li>
-            <li class="catalog__pagination-item">
-              <a class="catalog__pagination-link" href="#">5</a>
-            </li>
-            <li class="catalog__pagination-item">
-              <button class="catalog__pagination-button" type="button" aria-label="Следующая страница."></button>
-            </li>
-          </ol>
+          <div class="catalog__pagination-wrapper">
+            <a class="button catalog-show-button" href="#">Показать еще</a>
+            <ol class="catalog__pagination-list">
+              <li class="catalog__pagination-item">
+                <button class="catalog__pagination-button catalog__pagination-button--active" type="button"
+                  aria-label="Предыдущая страница."></button>
+              </li>
+              <li class="catalog__pagination-item">
+                <a class="catalog__pagination-link catalog__pagination-link--active" href="#">1</a>
+              </li>
+              <li class="catalog__pagination-item">
+                <a class="catalog__pagination-link" href="#">2</a>
+              </li>
+              <li class="catalog__pagination-item">
+                <a class="catalog__pagination-link" href="#">3</a>
+              </li>
+              <li class="catalog__pagination-item">
+                <a class="catalog__pagination-link" href="#">4</a>
+              </li>
+              <li class="catalog__pagination-item">
+                <a class="catalog__pagination-link" href="#">5</a>
+              </li>
+              <li class="catalog__pagination-item">
+                <button class="catalog__pagination-button catalog__pagination-button--next" type="button" aria-label="Следующая страница."></button>
+              </li>
+            </ol>
+          </div>
         </div>
       </main>
 
@@ -281,7 +318,8 @@
         <ul class="social-list footer__social-list">
           <li class="social-item">
             <a class="social-link" href="https://t.me/htmlacademy" rel="noopener">
-              <svg width="24" height="24" viewBox="0 0 24 24" role="img" aria-label="Ссылка на Телеграм." fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg width="24" height="24" viewBox="0 0 24 24" role="img" aria-label="Ссылка на Телеграм." fill="none"
+                xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                   d="M24 12a12 12 0 1 1-24 0 12 12 0 0 1 24 0ZM12.43 8.86c-1.17.48-3.5 1.49-7 3.01-.57.23-.86.45-.9.67-.04.36.42.5 1.04.7l.27.08c.6.2 1.43.44 1.86.45.39 0 .82-.16 1.3-.48 3.27-2.21 4.96-3.33 5.06-3.35.08-.02.18-.04.25.02.07.07.07.18.06.22-.05.19-1.84 1.86-2.77 2.72a28.24 28.24 0 0 0-.82.79c-.57.54-1 .96.02 1.63.5.32.89.59 1.28.85a88.77 88.77 0 0 0 1.8 1.23c.5.35.95.67 1.5.62.32-.03.65-.33.82-1.23.4-2.13 1.18-6.73 1.36-8.63.01-.16 0-.31-.02-.47a.5.5 0 0 0-.17-.33.78.78 0 0 0-.46-.14c-.46.01-1.15.25-4.48 1.64Z"
                   fill="#FCFCFC" />
@@ -290,7 +328,8 @@
           </li>
           <li class="social-item">
             <a class="social-link" href="https://vk.com/htmlacademy" rel="noopener">
-              <svg width="24" height="24" viewBox="0 0 24 24" role="img" aria-label="Ссылка на ВК." fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg width="24" height="24" viewBox="0 0 24 24" role="img" aria-label="Ссылка на ВК." fill="none"
+                xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                   d="M24 12a12 12 0 1 1-24 0 12 12 0 0 1 24 0Zm-11.41 2.97h-.72s-1.58.09-2.98-1.18C7.37 12.4 6.03 9.65 6.03 9.65s-.07-.18 0-.27c.1-.1.36-.1.36-.1l1.72-.01s.16.02.27.1c.1.05.15.17.15.17s.28.61.65 1.17c.71 1.08 1.05 1.32 1.29 1.2.35-.16.25-1.53.25-1.53s0-.5-.18-.71c-.14-.17-.41-.22-.53-.24-.1-.01.06-.2.26-.3.31-.13.86-.13 1.5-.13.5 0 .65.03.84.07.46.1.44.41.41 1.08l-.02.7v.18c-.01.34-.02.73.23.88.13.07.45 0 1.26-1.19.38-.56.66-1.23.66-1.23s.07-.12.16-.17c.1-.05.24-.04.24-.04h1.8s.54-.06.63.15c.1.23-.2.75-.94 1.61-.7.82-1.03 1.12-1 1.38.01.2.23.38.66.72.89.73 1.13 1.1 1.18 1.2l.01.01c.4.58-.44.62-.44.62l-1.6.02s-.34.06-.8-.2a3.94 3.94 0 0 1-.69-.6c-.33-.34-.65-.66-.91-.58-.45.12-.44.96-.44.96s0 .18-.1.28c-.1.1-.32.12-.32.12Z"
                   fill="#FCFCFC" />
@@ -299,7 +338,8 @@
           </li>
           <li class="social-item">
             <a class="social-link" href="https://www.youtube.com/user/htmlacademyru" rel="noopener">
-              <svg width="24" height="24" viewBox="0 0 24 24" role="img" aria-label="Ссылка на Ютуб." fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg width="24" height="24" viewBox="0 0 24 24" role="img" aria-label="Ссылка на Ютуб." fill="none"
+                xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="m14 11.8-2.8-1.32c-.25-.11-.45.01-.45.29v2.46c0 .28.2.4.45.29L14 12.2c.25-.12.25-.3 0-.42ZM12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24Zm0 16.88c-6.14 0-6.25-.56-6.25-4.88s.1-4.88 6.25-4.88c6.14 0 6.25.56 6.25 4.88s-.1 4.88-6.25 4.88Z"
                   fill="#FCFCFC" />
@@ -323,13 +363,15 @@
         </ul>
         <div class="copyright">
           <a class="copyright__link" href="https://htmlacademy.ru/" rel="noopener">
-            <img class="copyright__img" src="./images/logo/logo-htmlacademy.svg" width="93" height="27" alt="Изображение логотипа HTML Academy.">
+            <img class="copyright__img" src="./images/logo/logo-htmlacademy.svg" width="93" height="27"
+              alt="Изображение логотипа HTML Academy.">
           </a>
-          <p class="copyright__desc">Сделано в <a class="copyright__desc-underline" href="https://htmlacademy.ru/" rel="noopener">.html academy</a> © 2021</p>
+          <p class="copyright__desc">Сделано в <a class="copyright__desc-underline" href="https://htmlacademy.ru/"
+              rel="noopener">.html academy</a> © 2021</p>
         </div>
       </footer>
     </div>
-    <script src="./scripts/script-submenu.js"></script>
+    <script src="./scripts/script-header.js"></script>
   </body>
 
 </html>
