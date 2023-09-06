@@ -83,6 +83,7 @@
           <li class="header-menu__item">
             <div class="header-menu__basket-window">
               <h2 class="basket-window__title">Личный кабинет</h2>
+              <h2 class="basket-window__title basket-window__title--active">Ваша корзина пока пуста</h2>
               <ul class="basket-window__list">
                 <li class="basket-window__item">
                   <img class="basket-window__img" src="./images/catalog/ice-cream-1.jpg" width="46" height="46"
@@ -430,6 +431,18 @@
         </div>
       </footer>
     </div>
+    <div class="modal-containre">
+      <div class="modal">
+        <button class="modal__button" aria-label="Закрыть модальное окно."></button>
+        <div class="modal__content">
+          <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post">
+            <label class="visually-hidden modal__form-label" for="modal-name">Введите ваше имя и фамилию.</label>
+            <input class="input modal__form-input" type="text" id="modal-name" name="modal-name" placeholder="Имя и фамилия">
+          </form>
+        </div>
+      </div>
+    </div>
+
     <script src="./scripts/script-header.js"></script>
   </body>
 

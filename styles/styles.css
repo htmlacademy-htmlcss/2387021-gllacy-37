@@ -366,7 +366,7 @@ img {
   transition: all 0.3s ease-in-out;
 }
 
-/* Окно поиска открывается/закрывается по кнопке */
+/* Окно личного кабинета открывается/закрывается по кнопке */
 .header-menu__link-cabinet::before {
   mask: url("../images/icons/icon-login.svg");
   -webkit-mask: url("../images/icons/icon-login.svg");
@@ -381,6 +381,7 @@ img {
   min-height: 350px;
   border-radius: 4px;
   background-color: var(--grey);
+  box-shadow: 0 15px 40px 0 rgba(45, 52, 64, 0.1);
   padding: 48px 48px 52px 48px;
   z-index: 6;
 }
@@ -481,6 +482,7 @@ img {
   min-height: 382px;
   background-color: var(--grey);
   border-radius: 4px;
+  box-shadow: 0 15px 40px 0 rgba(45, 52, 64, 0.1);
   padding: 48px;
   z-index: 8;
 }
@@ -488,6 +490,10 @@ img {
 .header-menu__basket-on {
   display: block;
   animation: cabinet-appearance 0.3s ease-in-out;
+}
+
+.basket-window__title--active {
+  display: none;
 }
 
 .header-menu__basket-on + .header-menu__link-basket {
@@ -584,6 +590,30 @@ img {
   margin: 0;
   padding: 0;
   animation: window-appearance 0.4s ease-in;
+}
+
+/* Класс "header-menu__basket-empty" для отображения пустой корзины */
+.header-menu__basket-empty {
+  bottom: -164px;
+  width: 288px;
+  min-height: 156px;
+  padding: 48px 15px;
+}
+
+.header-menu__basket-empty .basket-window__list,
+.header-menu__basket-empty .basket-window__button,
+.header-menu__basket-empty .basket-window__total,
+.header-menu__basket-empty .basket-window__title {
+  display: none;
+}
+
+.header-menu__basket-empty .basket-window__title--active {
+  display: block;
+  margin: 0;
+}
+
+.header-menu__basket-empty .basket-window__title {
+  text-align: center;
 }
 
 .main-index {
