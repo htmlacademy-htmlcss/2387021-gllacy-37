@@ -50,19 +50,60 @@
         </address>
         <ul class="header-menu__list">
           <li class="header-menu__item">
+            <div class="header-menu__search-window">
+              <label class="visually-hidden" for="website-search"></label>
+              <input class="input header-menu__input" type="text" id="website-search" name="website-search"
+                placeholder="Поиск по сайту">
+            </div>
             <a class="header-menu__link header-menu__link-search" href="#">
               <p class="visually-hidden">Поиск по сайту.</p>
             </a>
-            <div class="header-menu__search-window">
-              <input class="input header-menu__input" type="text" placeholder="Поиск по сайту">
-            </div>
           </li>
           <li class="header-menu__item">
+            <div class="header-menu__cabinet-window">
+              <h2 class="cabinet-window__title">Личный кабинет</h2>
+              <form class="cabinet-window__form" action="https://echo.htmlacademy.ru/" method="get">
+                <label class="visually-hidden" for="cabinet-email">Введите адрес электронной почты.</label>
+                <input class="input cabinet-window__input" type="email" id="cabinet-email" name="cabinet-email"
+                  placeholder="email@example.com" required>
+                <label class="visually-hidden" for="cabinet-password">Введите пароль для входа в личный кабинет.</label>
+                <input class="input cabinet-window__input" type="password" id="cabinet-password" name="cabinet-password"
+                  placeholder="******" required>
+                <button class="button button--pink cabinet-window__button">Войти</button>
+                <div class="cabinet-window__link-wrapper">
+                  <a class="cabinet-window__link" href="#">Забыли пароль?</a>
+                  <a class="cabinet-window__link" href="#">Регистрация</a>
+                </div>
+              </form>
+            </div>
             <a class="header-menu__link header-menu__link-cabinet" href="#">
               Вход<p class="visually-hidden">Вход в личный кабинет.</p>
             </a>
           </li>
           <li class="header-menu__item">
+            <div class="header-menu__basket-window">
+              <h2 class="basket-window__title">Личный кабинет</h2>
+              <ul class="basket-window__list">
+                <li class="basket-window__item">
+                  <img class="basket-window__img" src="./images/catalog/ice-cream-1.jpg" width="46" height="46"
+                    alt="Шарик из клубничного мороженого.">
+                  <h3 class="basket-window__item-title">Малинка</h3>
+                  <p class="basket-window__item-desc">1 кг х 310 ₽</p>
+                  <span class="basket-window__item-cost">310 ₽</span>
+                  <button class="basket-window__close-button" type="button" aria-label="Удалить из корзины."></button>
+                </li>
+                <li class="basket-window__item">
+                  <img class="basket-window__img" src="./images/catalog/ice-cream-2.jpg" width="46" height="46"
+                    alt="Шарик из фисташкового мороженого.">
+                  <h3 class="basket-window__item-title">Бабл-гам</h3>
+                  <p class="basket-window__item-desc">1,5 кг х 320 ₽</p>
+                  <span class="basket-window__item-cost">480 ₽</span>
+                  <button class="basket-window__close-button" type="button" aria-label="Удалить из корзины."></button>
+                </li>
+              </ul>
+              <button class="button button--pink basket-window__button">Оформить заказ</button>
+              <p class="basket-window__total">Итого:<span class="basket-window__total-cost"> 790 ₽</span></p>
+            </div>
             <a class="header-menu__link header-menu__link-basket" href="#">
               2 товара<p class="visually-hidden">Корзина.</p>
             </a>
@@ -78,7 +119,8 @@
             <li class="slider__item slider__item--active">
               <div class="slider__text-wrapper">
                 <h2 class="title slider__title">Нежный пломбир с&nbsp;клубничным джемом</h2>
-                <p class="slider__decs">Натуральное мороженое из свежих сливок и&nbspмолока с вкуснейшим клубничным джемом –
+                <p class="slider__decs">Натуральное мороженое из свежих сливок и&nbspмолока с вкуснейшим клубничным
+                  джемом –
                   это идеальный десерт для всей семьи.</p>
                 <button class="button" type="button">Заказать</button>
               </div>
@@ -257,7 +299,7 @@
           <section class="subscribe">
             <div class="subscribe__wrapper">
               <h2 class="visually-hidden">Подпишитесь на рассылку.</h2>
-              <p class="subscribe__desc">Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого
+              <p class="subscribe__desc">Подпишитесь на нашу сладкую рассылку и будьте всегда в&nbsp;курсе всего самого
                 вкусного,
                 что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
               <form class="subscribe__form" action="https://echo.htmlacademy.ru/" method="post">
@@ -295,8 +337,8 @@
               </div>
               <div class="input-group">
                 <label class="delivery__label" for="phone">Телефон</label>
-                <input class="input delivery__tel-input" type="tel" name="phone" id="phone" placeholder="+7 800 999-00-00"
-                  required>
+                <input class="input delivery__tel-input" type="tel" name="phone" id="phone"
+                  placeholder="+7 800 999-00-00" required>
               </div>
               <div class="input-group">
                 <div class="tooltip-wrapper">
