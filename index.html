@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./styles/styles.css">
   </head>
 
-  <body>
+  <body style="background-color: #feafc3;">
     <div class="main-container">
       <header class="header">
         <a class="logo-link" href="#">
@@ -51,9 +51,13 @@
         <ul class="header-menu__list">
           <li class="header-menu__item">
             <div class="header-menu__search-window">
-              <label class="visually-hidden" for="website-search"></label>
-              <input class="input header-menu__input" type="text" id="website-search" name="website-search"
-                placeholder="Поиск по сайту">
+              <form class="header-menu__form" action="https://echo.htmlacademy.ru/" method="get">
+                <label class="visually-hidden" for="website-search"></label>
+                <input class="input header-menu__input" type="text" id="website-search" name="website-search"
+                  placeholder="Поиск по сайту">
+                <button class="header-menu__search-reset" type="reset" aria-label="Стереть поисковой запрос."></button>
+                <button class="visually-hidden" type="submit"></button>
+              </form>
             </div>
             <a class="header-menu__link header-menu__link-search" href="#">
               <p class="visually-hidden">Поиск по сайту.</p>
@@ -69,7 +73,7 @@
                 <label class="visually-hidden" for="cabinet-password">Введите пароль для входа в личный кабинет.</label>
                 <input class="input cabinet-window__input" type="password" id="cabinet-password" name="cabinet-password"
                   placeholder="******" required>
-                <button class="button button--pink cabinet-window__button">Войти</button>
+                <button class="button button--pink cabinet-window__button" type="submit">Войти<span class="loading-span"></span></button>
                 <div class="cabinet-window__link-wrapper">
                   <a class="cabinet-window__link" href="#">Забыли пароль?</a>
                   <a class="cabinet-window__link" href="#">Регистрация</a>
@@ -82,7 +86,7 @@
           </li>
           <li class="header-menu__item">
             <div class="header-menu__basket-window">
-              <h2 class="basket-window__title">Личный кабинет</h2>
+              <h2 class="basket-window__title">Корзина</h2>
               <h2 class="basket-window__title basket-window__title--active">Ваша корзина пока пуста</h2>
               <ul class="basket-window__list">
                 <li class="basket-window__item">
@@ -102,8 +106,8 @@
                   <button class="basket-window__close-button" type="button" aria-label="Удалить из корзины."></button>
                 </li>
               </ul>
-              <button class="button button--pink basket-window__button">Оформить заказ</button>
-              <p class="basket-window__total">Итого:<span class="basket-window__total-cost"> 790 ₽</span></p>
+              <button class="button button--pink basket-window__button">Оформить заказ<span class="loading-span"></span></button>
+              <p class="basket-window__total">Итого:<span class="basket-window__total-cost">&nbsp;790 ₽</span></p>
             </div>
             <a class="header-menu__link header-menu__link-basket" href="#">
               2 товара<p class="visually-hidden">Корзина.</p>
@@ -123,7 +127,7 @@
                 <p class="slider__decs">Натуральное мороженое из свежих сливок и&nbspмолока с вкуснейшим клубничным
                   джемом –
                   это идеальный десерт для всей семьи.</p>
-                <button class="button" type="button">Заказать</button>
+                <button class="button slider__button" type="button">Заказать<span class="loading-span"></span></button>
               </div>
               <div class="slider__image-wrapper">
                 <button class="slider__button-prev" aria-label="Предыдущий слайд."></button>
@@ -137,7 +141,7 @@
                 <h2 class="title slider__title">Сливочное мороженое со вкусом банана</h2>
                 <p class="slider__decs">Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и наслаждение
                   даже в самый жаркий летний день.</p>
-                <button class="button" type="button">Заказать</button>
+                <button class="button slider__button" type="button">Заказать<span class="loading-span"></span></button>
               </div>
               <div class="slider__image-wrapper">
                 <button class="slider__button-prev" aria-label="Предыдущий слайд."></button>
@@ -148,10 +152,10 @@
             </li>
             <li class="slider__item">
               <div class="slider__text-wrapper">
-                <h2 class="title slider__title">Карамельный пломбир с маршмеллоу</h2>
+                <h2 class="title slider__title">Карамельный пломбир с&nbsp;маршмеллоу</h2>
                 <p class="slider__decs">Необычный сладкий десерт с карамельным топпингом и кусочками зефира завоюет
-                  сердца сладкоежек всех возрастов.</p>
-                <button class="button" type="button">Заказать</button>
+                  сердца&nbsp;сладкоежек всех возрастов.</p>
+                <button class="button slider__button" type="button">Заказать<span class="loading-span"></span></button>
               </div>
               <div class="slider__image-wrapper">
                 <button class="slider__button-prev" aria-label="Предыдущий слайд."></button>
@@ -162,8 +166,8 @@
             </li>
           </ol>
           <ol class="slider__pagination">
-            <li class="slider__pagination-item">
-              <button class="slider__pagination-button slider__pagination-button--active"
+            <li class="slider__pagination-item slider__pagination-item--active">
+              <button class="slider__pagination-button"
                 aria-label="Первый слайд."></button>
             </li>
             <li class="slider__pagination-item">
@@ -214,13 +218,13 @@
               <h3 class="gifts__item-title">Малинка даром!</h3>
               <p class="gifts__item-desc">При покупке 2 кг любого фруктового мороженого добавим в ваш заказ банку
                 малинового варенья бесплатно.</p>
-              <button class="button gifts__button" type="button">Хочу подарок</button>
+              <button class="button gifts__button" type="button">Хочу подарок<span class="loading-span"></span></button>
             </li>
             <li class="gifts__item gifts__item--marshmallow">
               <h3 class="gifts__item-title">Маршмеллоу даром!</h3>
               <p class="gifts__item-desc">При покупке 2 кг пломбира добавим в ваш заказ упаковку нежных зефирок
                 совершенно бесплатно.</p>
-              <button class="button gifts__button" type="button">Хочу подарок</button>
+              <button class="button gifts__button" type="button">Хочу подарок<span class="loading-span"></span></button>
             </li>
           </ul>
         </section>
@@ -307,7 +311,7 @@
                 <label class="visually-hidden" for="email"></label>
                 <input class="input subscribe__input" type="email" name="email" id="email"
                   placeholder="email@example.com" required>
-                <button class="button subscribe__button button--pink" type="submit">Отправить</button>
+                <button class="button subscribe__button button--pink" type="submit">Отправить<span class="loading-span"></span></button>
               </form>
             </div>
           </section>
@@ -329,7 +333,7 @@
                   <span class="tooltip">
                     <button class="tooltip__button" type="button" aria-labelledby="date-delivery"></button>
                     <span class="tooltip-text" role="tooltip" id="date-delivery">
-                      <!-- текст тултипа -->
+                      Введите удобную для вас дату доставки
                     </span>
                   </span>
                 </div>
@@ -347,14 +351,14 @@
                   <span class="tooltip">
                     <button class="tooltip__button" type="button" aria-labelledby="address-delivery"></button>
                     <span class="tooltip-text" role="tooltip" id="address-delivery">
-                      <!-- Введите название улицы, дома и квартиры -->
+                      Введите название улицы, дома и квартиры
                     </span>
                   </span>
                 </div>
                 <input class="input delivery__address-input" type="text" name="address" id="address"
                   placeholder="ул. Большая Конюшенная, 19/8" required>
               </div>
-              <button class="button delivery__button button--pink" type="submit">Отправить</button>
+              <button class="button delivery__button button--pink" type="submit">Отправить<span class="loading-span"></span></button>
             </fieldset>
           </form>
         </section>
@@ -369,7 +373,7 @@
               <b class="contacts__tel-desc">+7 (812) 812-12-12</b>
               <span class="contacts__desc-schedule">(с 10 до 20 ежедневно)</span>
             </address>
-            <button class="button contacts__button button--pink" type="button">Форма обратной связи</button>
+            <button class="button contacts__button button--pink" type="button">Форма обратной связи<span class="loading-span"></span></button>
           </div>
         </section>
       </main>
@@ -431,19 +435,29 @@
         </div>
       </footer>
     </div>
-    <div class="modal-containre">
+    <div class="modal-container">
       <div class="modal">
-        <button class="modal__button" aria-label="Закрыть модальное окно."></button>
+        <button class="modal__button-close" type="button" aria-label="Закрыть модальное окно."></button>
         <div class="modal__content">
+          <h2 class="modal__title">Мы обязательно ответим вам!</h2>
           <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="visually-hidden modal__form-label" for="modal-name">Введите ваше имя и фамилию.</label>
-            <input class="input modal__form-input" type="text" id="modal-name" name="modal-name" placeholder="Имя и фамилия">
+            <input class="input modal__form-input" type="text" id="modal-name" name="modal-name"
+              placeholder="Имя и фамилия">
+            <label class="visually-hidden modal__form-label" for="modal-email">Введите ваш email.</label>
+            <input class="input modal__form-input" type="email" id="modal-email" name="modal-email"
+              placeholder="email@example.com" required>
+            <label class="visually-hidden modal__form-label" for="modal-message">Введите сообщение для обратной связи.</label>
+            <textarea class="input modal__form-textarea" name="modal-message" id="modal-message" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+            <button class="button button--pink modal__form-button" type="submit">Отправить<span class="loading-span"></span></button>
           </form>
         </div>
       </div>
     </div>
 
     <script src="./scripts/script-header.js"></script>
+    <script src="./scripts/script-modal.js"></script>
+    <script src="./scripts/script-slider.js"></script>
   </body>
 
 </html>
