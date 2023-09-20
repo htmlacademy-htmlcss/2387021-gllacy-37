@@ -422,17 +422,16 @@ img {
 
 @keyframes input-appearance {
   0% {
-    transform: translateY(-50px);
     opacity: 0;
   }
 
   50% {
-    transform: translateY(-50px);
+    filter: blur(10px);
     opacity: 0;
   }
 
   100% {
-    transform: translateY(0);
+    filter: blur(0);
     opacity: 1;
   }
 }
@@ -455,6 +454,18 @@ img {
 /* Класс header-menu__search-reset-on для отображения кнопки при появлении текста у поискового инпута */
 .header-menu__search-reset-on {
   display: block;
+  animation: reset-appearance 0.3s ease-in;
+}
+
+@keyframes reset-appearance {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%) rotate(-90deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-50%) rotate(0);
+  }
 }
 
 .header-menu__link-cabinet,
@@ -627,9 +638,17 @@ img {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  max-height: 270px;
+  overflow-y: auto;
+  scrollbar-width: none;
   margin: 0 0 32px 0;
   padding: 0;
   animation: window-appearance 0.4s ease-in;
+}
+
+.basket-window__list::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 .basket-window__item {
@@ -831,7 +850,7 @@ img {
   width: 327px;
   height: 312px;
   border-radius: 327px;
-  opacity: 1;
+  opacity: 0.4;
 }
 
 .slider__text-wrapper {
@@ -952,7 +971,7 @@ img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background-color: #ffcbd8;
+  background-color: #ffffff;
   opacity: 0.4;
 }
 
@@ -1228,7 +1247,7 @@ img {
   min-height: 281px;
   background-color: var(--grey);
   border-radius: 8px;
-  padding: 133px 40px 28px 40px;
+  padding: 133px 40px 24px 40px;
   margin-top: 51px;
   list-style: none;
 }
@@ -1244,6 +1263,10 @@ img {
 .popular__item-title {
   grid-column: 1/-1;
   margin: 0 0 8px 0;
+  color: var(--black);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
 }
 
 .popular__item-desc {
@@ -1254,6 +1277,10 @@ img {
 .popular__item-cost {
   align-self: center;
   justify-self: start;
+  color: var(--black);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
 }
 
 .popular__item-button {
@@ -1496,7 +1523,7 @@ img {
 
 .subscribe__input {
   width: 332px;
-  margin-right: 18px;
+  margin-right: 14px;
 }
 
 .button--pink {
@@ -1814,7 +1841,7 @@ img {
 
 /* Каталог */
 .catalog__inner-header {
-  padding: 32px 0 40px 0;
+  padding: 32px 0 38px 0;
 }
 
 .breadcrumbs-list {
@@ -1880,14 +1907,14 @@ img {
 }
 
 .catalog__filter {
-  padding-bottom: 46px;
+  padding-bottom: 44px;
 }
 
 .filter-form {
   display: flex;
   align-items: end;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 16px 24px;
   width: 823px;
   min-height: 148px;
 }
@@ -1902,7 +1929,7 @@ img {
   color: var(--black);
   font-size: 14px;
   line-height: 20px;
-  margin-bottom: 8px;
+  margin: 0 0 8px 16px;
 }
 
 .filter-select {
@@ -1963,7 +1990,7 @@ img {
   position: absolute;
   width: 16px;
   height: 16px;
-  transform: translate(-50%, -50%);
+  transform: translate(-100%, -50%);
   border-radius: 50%;
   background-color: var(--grey);
   border: 6px solid var(--black);
@@ -1991,7 +2018,7 @@ img {
 
 .max-button {
   right: 0;
-  transform: translate(50%, -50%);
+  transform: translate(100%, -50%);
 }
 
 .filter-list {
@@ -2121,23 +2148,44 @@ img {
 }
 
 .catalog-button {
+  position: relative;
+  background-color: rgba(252, 252, 252, 0.3);
+  z-index: 1;
+  font-size: 14px;
   width: 185px;
   min-height: 36px;
   border-radius: 20px;
-  background-color: rgb(252, 252, 252, 0.3);
   outline: 2px solid var(--grey);
   padding: 8px 32px;
   margin-bottom: 2px;
+  margin-left: -8px;
   box-shadow: none;
+}
+
+.catalog-button::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: var(--grey);
+  transition: clip-path 0.3s ease;
+  clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+  border-radius: 20px;
 }
 
 .catalog-button:hover {
   outline: 2px solid rgba(252, 252, 252, 0.3);
-  background: var(--grey);
 }
 
 .catalog-button:focus {
   outline: 2px solid var(--black);
+}
+
+.catalog-button:hover::before {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
 .catalog-button:active {

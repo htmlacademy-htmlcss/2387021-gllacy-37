@@ -17,7 +17,7 @@ let sliderShow = (index) => {
       document.body.style.backgroundColor = '#ffc850';
     }
 
-  for (let i = 0; o < sliderDots.length; i++) {
+  for (let i = 0; i < sliderDots.length; i++) {
     sliderDots[i].classList.remove('slider__pagination-item--active');
   }
   sliderDots[index].classList.add('slider__pagination-item--active');
