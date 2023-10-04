@@ -65,6 +65,7 @@ let total = document.querySelector('.basket-window__total-cost');
 let costs = Array.from(document.querySelectorAll('.basket-window__item-cost-value'));
 // let countElementsArr = arr.length;
 
+
 closeButtons[0].onclick = () => {
   basketList.removeChild(basketItems[0]);
   total.textContent = total - costs[0];
